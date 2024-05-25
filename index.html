@@ -1,0 +1,383 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="description" content="">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:image:alt" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism-okaidia.min.css" rel="stylesheet"/>
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+
+<div id="heading-wrapper">
+  <h1 id="main-heading">Oracle Coherence</h1>
+  <p class="short-description">Scalable, distributed in-memory data grid for real-time applications</p>
+</div>
+
+<div class="clearfix articles">
+  <div class="pull-left">
+    <article class="article">
+      <h3>
+        So what is it?
+      </h3>
+      <p>
+        Oracle Coherence is a leading in&#8209;memory data grid solution designed to provide scalable,
+        reliable, and high&#8209;performance data management. It serves as a middleware layer that enables
+        applications to efficiently manage large volumes of data in a distributed, highly available, and fault&#8209;tolerant
+        manner.
+        Coherence is widely used in various industries, including finance,
+        telecommunications, and e&#8209;commerce, where real&#8209;time data access and processing are critical.
+      </p>
+    </article>
+  </div>
+
+  <div class="pull-right">
+    <article class="article">
+      <h3>
+        Overview
+      </h3>
+
+      <p>
+        Oracle Coherence provides a cohesive environment where data can be stored, retrieved, and manipulated across
+        multiple nodes in a cluster.
+        This architecture ensures that applications can handle large datasets with minimal latency and maximum
+        throughput.
+        The core capabilities of Oracle Coherence revolve around its distributed caching,
+        fault tolerance, scalability, data consistency, and event-driven programming features.
+      </p>
+
+    </article>
+  </div>
+</div>
+
+
+<h2 class="sub-heading">Key components</h2>
+
+<ul class="component-list">
+  <li class="components-item">
+    <h3 class="components-item-heading">Distributed Caching</h3>
+    <p class="components-item-description">Coherence partitions data across multiple nodes in a cluster, enabling
+      horizontal scalability. Each node holds a portion of the data, and the system can dynamically balance the load as
+      new nodes are added or removed. This distributed nature eliminates the bottleneck associated with single-server
+      architectures and provides linear scalability.</p>
+  </li>
+  <li class="components-item">
+    <h3 class="components-item-heading">In-Memory Data Management</h3>
+    <p class="components-item-description">By storing data in memory rather than on disk, Coherence significantly
+      reduces data access times. This is crucial for applications that require real-time data processing, such as online
+      trading platforms, recommendation engines, and fraud detection systems.</p>
+  </li>
+  <li class="components-item">
+    <h3 class="components-item-heading">High Availability and Fault Tolerance</h3>
+    <p class="components-item-description">Coherence ensures high availability through data replication. It maintains
+      multiple copies of each data entry across different nodes. If one node fails, other nodes can take over its
+      responsibilities, ensuring that there is no single point of failure and that data remains available and
+      consistent.</p>
+  </li>
+  <li class="components-item">
+    <h3 class="components-item-heading">Scalability</h3>
+    <p class="components-item-description">Coherence clusters can be easily scaled by adding or removing nodes without
+      downtime. This dynamic scalability allows businesses to handle growing data volumes and increased user loads
+      efficiently. The system can automatically rebalance data and workload among nodes to maintain optimal
+      performance.</p>
+  </li>
+  <li class="components-item">
+    <h3 class="components-item-heading">Data Consistency</h3>
+    <p class="components-item-description">Coherence offers strong data consistency guarantees. It employs distributed
+      locking, transactional caches, and data versioning to ensure that all nodes have a consistent view of the data.
+      Applications can perform complex transactions across multiple nodes while maintaining data integrity.</p>
+  </li>
+  <li class="components-item">
+    <h3 class="components-item-heading">Query Capabilities</h3>
+    <p class="components-item-description">Coherence provides robust query capabilities, allowing developers to perform
+      complex queries on the cached data. It supports standard query languages such as SQL and its own Coherence Query
+      Language (CQL), making it easy to filter, sort, and aggregate data in real-time.</p>
+  </li>
+  <li class="components-item">
+    <h3 class="components-item-heading">Event-Driven Programming</h3>
+    <p class="components-item-description">Coherence supports event-driven programming, enabling applications to respond
+      to changes in the data grid in real-time. This feature is particularly useful for building responsive and
+      interactive applications, such as monitoring systems and real-time analytics platforms.</p>
+  </li>
+  <li class="components-item">
+    <h3 class="components-item-heading">Ease of Integration</h3>
+    <p class="components-item-description">Coherence is designed to integrate seamlessly with existing enterprise
+      applications and systems. It supports a wide range of APIs and can be used with Java, .NET, and C++ applications.
+      Additionally, it can be integrated with other Oracle products, such as Oracle Database and Oracle WebLogic Server,
+      to create a comprehensive data management solution.</p>
+  </li>
+  <li class="components-item">
+    <h3 class="components-item-heading">Management and Monitoring</h3>
+    <p class="components-item-description">Coherence provides extensive tools for managing and monitoring the data grid.
+      These tools allow administrators to monitor cluster health, performance, and resource utilization. They can also
+      be used to configure and manage cache services, perform diagnostics, and troubleshoot issues.</p>
+  </li>
+</ul>
+
+<h2 class="sub-heading">Technical Architecture</h2>
+
+<ul class="component-list">
+  <li class="components-item">
+    <h3 class="components-item-heading">Nodes and Clusters</h3>
+    <p class="components-item-description">A Coherence cluster consists of multiple nodes, each running an instance of
+      the Coherence software. Nodes
+      communicate with each other to share data and coordinate activities. The cluster is managed as a single logical
+      unit, allowing for seamless data distribution and fault tolerance.</p>
+  </li>
+  <li class="components-item">
+    <h3 class="components-item-heading">Partitioned Caches</h3>
+    <p class="components-item-description">Data in Coherence is stored in partitioned caches. Each partition is a subset
+      of the total data set, and
+      partitions are distributed across all nodes in the cluster. This partitioning ensures that the data load is evenly
+      distributed and that the system can scale horizontally.</p>
+  </li>
+  <li class="components-item">
+    <h3 class="components-item-heading">Replication and Backup</h3>
+    <p class="components-item-description">To ensure high availability, Coherence replicates data across multiple nodes.
+      Each piece of data has one or more
+      backups, which are stored on different nodes than the primary copy. In the event of a node failure, the backup
+      copy can be quickly promoted to the primary, ensuring continuous data availability.</p>
+  </li>
+  <li class="components-item">
+    <h3 class="components-item-heading">Service-Oriented Architecture</h3>
+    <p class="components-item-description">Coherence uses a service-oriented architecture (SOA) to provide various data
+      management services. These services
+      include distributed caching, invocation services for executing tasks across the cluster, and data aggregation
+      services for performing distributed queries and computations.</p>
+  </li>
+  <li class="components-item">
+    <h3 class="components-item-heading">Near Caches</h3>
+    <p class="components-item-description">Coherence supports near caches, which are local caches that store frequently
+      accessed data. Near caches reduce
+      the need to access remote nodes for common data requests, further reducing latency and improving performance.</p>
+  </li>
+  <li class="components-item">
+    <h3 class="components-item-heading">Extend and Federated Caching</h3>
+    <p class="components-item-description">Coherence Extend allows clients outside the cluster to interact with the data
+      grid over TCP/IP. Federated caching
+      enables data to be shared across multiple Coherence clusters, supporting multi-datacenter deployments and ensuring
+      data consistency across geographically distributed systems.</p>
+  </li>
+</ul>
+
+<h2 class="sub-heading">Use cases</h2>
+<div class="use-case-grid">
+  <div class="card">
+    <h3>Fast data access and back-end offload at omnichannel scale</h3>
+    <p>
+      Overloaded backends cause poor experience and scaling limits. Inject Coherence to relieve load and improve
+      performance.
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>Grid computing platform for analytics and execution</h3>
+    <p>
+      Coherence’s in-place processing is ideal for data-intensive computation, such as risk analytics in financial
+      services.
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>Event processing and event-driven architecture</h3>
+    <p>
+      With event models, messaging, and integration with Oracle Stream Analytics, Coherence is ideal for event-driven
+      systems.
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>System of record for microservice applications</h3>
+    <p>
+      Coherence’s persistence feature alleviates the need for any other data store needed for state used by
+      microservices.
+    </p>
+  </div>
+</div>
+
+
+<h2 class="sub-heading">Example use case - code demonstration</h2>
+<p class="text-center">
+  Populating a Coherence cache with
+  domain objects that are read from text files. Use of APIs from the Coherence aggregator, extractor, and filter
+  packages.
+</p>
+
+<h3 class="text-center">POF Configuration File with the ContactId Entry</h3>
+<div class="code-block code-block-large">
+<pre><code class="language-xml">
+&lt;?xml version=&quot;1.0&quot;?&gt;
+
+&lt;pof-config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xmlns="http://xmlns.oracle.com/coherence/coherence-pof-config"
+              xsi:schemaLocation="http://xmlns.oracle.com/coherence/coherence-pof-config coherence-pof-config.xsd"&gt;
+  &lt;user-type-list&gt;
+
+    &lt;!-- coherence POF user types --&gt;
+    &lt;include&gt;coherence-pof-config.xml&lt;/include&gt;
+
+    &lt;!-- com.tangosol.examples package --&gt;
+    &lt;user-type&gt;
+      &lt;type-id&gt;1001&lt;/type-id&gt;
+      &lt;class-name&gt;com.oracle.handson.Contact&lt;/class-name&gt;
+    &lt;/user-type&gt;
+    &lt;user-type&gt;
+      &lt;type-id&gt;1002&lt;/type-id&gt;
+      &lt;class-name&gt;com.oracle.handson.Address&lt;/class-name&gt;
+    &lt;/user-type&gt;
+    &lt;user-type&gt;
+      &lt;type-id&gt;1003&lt;/type-id&gt;
+      &lt;class-name&gt;com.oracle.handson.PhoneNumber&lt;/class-name&gt;
+    &lt;/user-type&gt;
+    &lt;user-type&gt;
+      &lt;type-id&gt;1004&lt;/type-id&gt;
+      &lt;class-name&gt;com.oracle.handson.ContactId&lt;/class-name&gt;
+    &lt;/user-type&gt;
+  &lt;/user-type-list&gt;
+  &lt;allow-interfaces&gt;true&lt;/allow-interfaces&gt;
+  &lt;allow-subclasses&gt;true&lt;/allow-subclasses&gt;
+&lt;/pof-config&gt;
+</code></pre>
+</div>
+
+<h3 class="text-center">Sample Cache Loading Program</h3>
+<div class="code-block">
+<pre class="code"><code class="language-java">
+package com.oracle.handson;
+
+import *
+
+/**
+* LoaderExample loads contacts into the cache from a file.
+*
+*/
+public class LoaderExample
+    {
+    // ----- static methods -------------------------------------------------
+
+    /**
+    * Load contacts.
+    */
+    public static void main (String[] asArg)
+            throws IOException
+        {
+        String sFile  = asArg.length > 0 ? asArg[0] : DataGenerator.FILENAME;
+        String sCache = asArg.length > 1 ? asArg[1] : CACHENAME;
+
+        System.out.println("input file: " + sFile);
+        System.out.println("cache name: " + sCache);
+
+        new LoaderExample().load(CacheFactory.getCache(sCache),
+                new FileInputStream(sFile));
+        CacheFactory.shutdown();
+        }
+
+    /**
+    * Load cache from stream.
+    *
+    */
+    public void load(NamedCache cache, InputStream in)
+            throws IOException
+        {
+        BufferedReader reader   = new BufferedReader(new InputStreamReader(in));
+        Map            mapBatch = new HashMap(1024);
+        String         sRecord;
+        int            cRecord  = 0;
+
+        while ((sRecord = reader.readLine()) != null)
+            {
+            // parse record
+            String[]      asPart     = sRecord.split(",");
+            int           ofPart     = 0;
+            String        sFirstName =  asPart[ofPart++];
+            String        sLastName  =  asPart[ofPart++];
+            ContactId          id    = new ContactId(sFirstName, sLastName);
+            Address       addrHome   = new Address(
+                                         /*streetline1*/ asPart[ofPart++],
+                                         /*streetline2*/ asPart[ofPart++],
+                                         /*city*/        asPart[ofPart++],
+                                         /*state*/       asPart[ofPart++],
+                                         /*zip*/         asPart[ofPart++],
+                                         /*country*/     asPart[ofPart++]);
+            Address       addrWork   = new Address(
+                                         /*streetline1*/ asPart[ofPart++],
+                                         /*streetline2*/ asPart[ofPart++],
+                                         /*city*/        asPart[ofPart++],
+                                         /*state*/       asPart[ofPart++],
+                                         /*zip*/         asPart[ofPart++],
+                                         /*country*/     asPart[ofPart++]);
+            Map           mapTelNum  = new HashMap();
+
+            for (int c = asPart.length - 1; ofPart < c; )
+                {
+                mapTelNum.put(/*type*/ asPart[ofPart++], new PhoneNumber(
+                    /*access code*/  Short.parseShort(asPart[ofPart++]),
+                    /*country code*/ Short.parseShort(asPart[ofPart++]),
+                    /*area code*/    Short.parseShort(asPart[ofPart++]),
+                    /*local num*/    Integer.parseInt(asPart[ofPart++])));
+                }
+            Date dtBirth = new Date(Long.parseLong(asPart[ofPart]));
+
+            // Construct Contact and add to batch
+            Contact con1 = new Contact(sFirstName, sLastName, addrHome,
+                                       addrWork, mapTelNum, dtBirth);
+            System.out.println(con1);
+            mapBatch.put(id, con1);
+
+            ++cRecord;
+            if  (cRecord % 1024 == 0)
+                {
+                // load batch
+                cache.putAll(mapBatch);
+                mapBatch.clear();
+                System.out.print('.');
+                System.out.flush();
+                }
+            }
+
+            if (!mapBatch.isEmpty())
+               {
+               // load final batch
+               cache.putAll(mapBatch);
+               }
+
+        System.out.println("Added " + cRecord + " entries to cache");
+        }
+
+
+    // ----- constants ------------------------------------------------------
+
+    /**
+    * Default cache name.
+    */
+    public static final String CACHENAME = "ContactsCache";
+
+}
+</code></pre>
+</div>
+
+<div class="sources">
+  <p class="tiny text-center">Main sources</p>
+  <a href="https://docs.oracle.com">https://docs.oracle.com</a>
+  <a href="https://www.oracle.com/java/coherence/">https://www.oracle.com/java/coherence/</a>
+</div>
+
+
+<script src="js/app.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/prism.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/components/prism-java.min.js"></script>
+</body>
+
+</html>
